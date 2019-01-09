@@ -5,11 +5,7 @@
     padding:0px;
     margin: 0px;
 }
-body{
-    margin: 0px;
-    padding:0px;
 
-}
 .footer{
     background-color: #350606;
     padding: 7px;
@@ -34,7 +30,7 @@ body{
     flex-direction:column;
     justify-content: center;
     align-items: center;
-    width: 40%
+    width: 40%;
 }
 .container form{
     width: 50%;
@@ -47,6 +43,8 @@ body{
 }
 .container button{
     float: right;
+    background-color: #222;
+    color: white;
 }
 .social{
     display: flex;
