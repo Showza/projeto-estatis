@@ -23,16 +23,10 @@
                         <a href="<?php echo base_url('admin/postagens') ?>"><i class="fa fa-edit fa-fw"></i> Postagens</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('admin/fotos') ?>"><i class="fa fa-camera-retro fa-fw"></i> Fotos</a>
-                    </li>
-                    <li>
                         <a href="<?php echo base_url('admin/galeria') ?>"><i class="fa fa-image fa-fw"></i> Galeria</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('admin/projetos') ?>"><i class="fa fa-trophy fa-fw"></i> Projetos</a>
-                    </li>
-                    <li>
-                        <a href="<?php echo base_url('admin/servicos') ?>"><i class="fa fa-clipboard fa-fw"></i> Serviços</a>
+                        <a href="<?php echo base_url('admin/projetos_servicos') ?>"><i class="fa fa-clipboard fa-fw"></i>Projetos e Serviços</a>
                     </li>
                     <li>
                         <a href="<?php echo base_url('admin/sobre_nos') ?>"><i class="fa fa-pencil fa-fw"></i> Sobre Nós</a>
@@ -45,9 +39,6 @@
                     </li>
                     <li>
                         <a href="<?php echo base_url('admin/contato') ?>"><i class="fa fa-at fa-fw"></i> Contato</a>
-                    </li>
-                    <li>
-                        <a href="<?php echo base_url('admin/usuarios') ?>"><i class="fa fa-wrench fa-fw"></i> Usuários</a>
                     </li>
                     <li>
                         <a href="<?php echo base_url('admin/usuarios/logout') ?>"><i class="fa fa-sign-out fa-fw"></i> Sair do Sistema</a>
