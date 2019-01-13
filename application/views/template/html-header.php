@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>EstatisJr</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href=" http://localhost/projeto-estatis/assets/css/style.css " rel="stylesheet">
+	<link href="<?php echo base_url('/assets/css/style.css'); ?>" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
