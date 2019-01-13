@@ -8,6 +8,5 @@
       <a href="#">SERVIÇOS</a>
       <a href="#">BLOG</a>
       <a href="#">CONTATO</a>
-      
       </div>
 </div>
