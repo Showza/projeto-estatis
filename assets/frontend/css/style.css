@@ -9,7 +9,6 @@
     HEADER
 */
 .navbar{
-    padding: 1px;
     background-color: #f1f1f1;
     display: flex;
     flex-direction: row;
@@ -17,12 +16,11 @@
     justify-content: space-between;
 }
 .logo{
-    padding:5px;
     width: 25%;
 }
 .logo a img{
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
 }
 .menu{
     width: 50%;
@@ -34,14 +32,15 @@
 .menu a {
     color: #350606;
     overflow: hidden;
-    padding:5px;
     text-decoration:none; 
     font-size: 25px;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
 }
 .menu a:hover{
-    color: #111;
+    text-decoration: none; 
+    color: #aaa;
+           
 }
 
 
