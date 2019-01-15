@@ -8,9 +8,9 @@
 
         public function index( )
         {
-            $this->load->view('template/html-header');
-            $this->load->view('template/header');
-            $this->load->view('template/footer');
+            $this->load->view('frontend/template/html-header');
+            $this->load->view('frontend/template/header');
+            $this->load->view('frontend/template/footer');
         }
     }   
 ?>
