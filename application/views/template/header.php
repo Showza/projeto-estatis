@@ -1,3 +1,17 @@
+<header class="menu">
+  <a href="#"><img class="logo" src="assets/frontend/img/LOGO.png"></a>  
+  <nav class="navli">
+    <li><a href="#">INICIO</a></li>
+    <li><a href="#">QUEM SOMOS</a></li>
+    <li><a href="#">SERVIÇOS</a></li>
+    <li><a href="#">BLOG</a></li>
+    <li><a href="#">CONTATO</a></li>
+  </nav>
+</header>
+
+
+
+<!--
 <div class="navbar">
   <div class="logo"> 
     <a href="#"><img src="assets/frontend/img/LOGO.png"></a>
@@ -11,3 +25,4 @@
       
       </div>
 </div>
+-->
