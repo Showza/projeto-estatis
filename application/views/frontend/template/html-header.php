@@ -4,6 +4,7 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+
 	<title><?php echo $titulo.' | '.$subtitulo ?></title>
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url('assets/frontend/img/logo.png') ?>">
 
@@ -24,3 +25,4 @@
 
 </head>
 <body style="overflow-x: hidden;">
+

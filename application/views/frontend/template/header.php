@@ -1,9 +1,9 @@
 <div class="navbar">
-  <div class="logo">
-    <a href="#"><img src="assets/frontend/img/LOGO.png"></a>
+  <div class="logo"> 
+    <a href="#"><img src="<?php echo base_url('/assets/frontend/img/logo.png'); ?>"></a>
   </div>
   <div class="menu">
-      <a href="#">INICIO</a>
+      <a class="active" href="#">INICIO</a>  
       <a href="#">QUEM SOMOS</a>
       <a href="#">SERVIÇOS</a>
       <a href="#">BLOG</a>
