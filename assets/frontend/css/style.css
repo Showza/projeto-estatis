@@ -3,7 +3,6 @@
 /*
     HEADER
 */
-
 .menu {
     width: 100%;
     position: absolute;
@@ -12,7 +11,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #ffefd5;
+    background: #fffff0;
 }
 .logo {
     width: 100px;
@@ -20,15 +19,18 @@
 }
 .navli {
     display: flex;
+ 
+}
+.navli li{
+    list-style: none;
+    text-decoration: none;
+    margin: 0px 15px;
+}
+.navli li a{
+    font-weight: bold;
     color: #8b0000;
-    margin: 0 15px;
 }
-header li a{
-    
-}
-header li {
-    
-}
+
 /*
 .navbar{
     background-color: #f1f1f1;

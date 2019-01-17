@@ -1,5 +1,5 @@
 <header class="menu">
-  <a href="#"><img class="logo" src="assets/frontend/img/LOGO.png"></a>  
+  <a href="#"><img class="logo" src="<?php echo base_url('/assets/frontend/img/logo.png'); ?>"></a>  
   <nav class="navli">
     <li><a href="#">INICIO</a></li>
     <li><a href="#">QUEM SOMOS</a></li>
@@ -14,7 +14,7 @@
 <!--
 <div class="navbar">
   <div class="logo"> 
-    <a href="#"><img src="<?php echo base_url('/assets/frontend/img/logo.png'); ?>"></a>
+    <a href="#"><img src=""></a>
   </div>
   <div class="menu">
       <a class="active" href="#">INICIO</a>  
