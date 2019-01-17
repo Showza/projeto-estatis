@@ -9,126 +9,26 @@
     </style>
 
     <!-- Full-width images with number and caption text -->
+    <?php
+	  foreach($slider as $slides){
+	?>
     <div class="mySlides">
-        <img class="slide" src="<?php echo base_url('assets/frontend/img/slider/slider1.jpg') ?>" style="width:100%;">
-        <font face="Titillium Web"><div class="text">ANÁLISES ACADÊMICAS</div>
+        <img class="slide" src="<?php echo base_url('assets/frontend/img/slider/'.$slides->imagem.'.jpg') ?>" style="width:100%;">
+        <font face="Titillium Web"><div class="text"><?php echo $slides->titulo ?></div>
             <div class="subtext">
-                <form method="get" action="#contato" style="text-align:center;">
+                <form method="get" action="<?php echo limpar($slides->link) ?>" style="text-align:center;">
                     <button type="submit" style="background-color: rgba(0,0,0,0);
                     border-color: #64030e; border-width: 5px; border-style: solid;
                     height:80px; width:450px">
-                        <b>PEÇA UM ORÇAMENTO</b>
+                        <b><?php echo $slides->subtitulo ?></b>
                     </button>
                 </form>
             </div>
         </font>
     </div>
-
-    <div class="mySlides">
-        <img class="slide" src="<?php echo base_url('assets/frontend/img/slider/slider1.jpg') ?>" style="width:100%;">
-        <font face="Titillium Web"><div class="text">MODELAGEM ESTATÍSTICA</div>
-            <div class="subtext">
-                <form method="get" action="#contato" style="text-align:center;">
-                    <button type="submit" style="background-color: rgba(0,0,0,0);
-                    border-color: #64030e; border-width: 5px; border-style: solid;
-                    height:80px; width:450px">
-                        <b>PEÇA UM ORÇAMENTO</b>
-                    </button>
-                </form>
-            </div>
-        </font>
-    </div>
-
-    <div class="mySlides">
-        <img class="slide" src="<?php echo base_url('assets/frontend/img/slider/slider1.jpg') ?>" style="width:100%;">
-        <font face="Titillium Web"><div class="text">ESTATÍSTICA DESCRITIVA</div>
-            <div class="subtext">
-                <form method="get" action="#contato" style="text-align:center;">
-                    <button type="submit" style="background-color: rgba(0,0,0,0);
-                    border-color: #64030e; border-width: 5px; border-style: solid;
-                    height:80px; width:450px">
-                        <b>PEÇA UM ORÇAMENTO</b>
-                    </button>
-                </form>
-            </div>
-        </font>
-    </div>
-
-    <div class="mySlides">
-        <img class="slide" src="<?php echo base_url('assets/frontend/img/slider/slider1.jpg') ?>" style="width:100%;">
-        <font face="Titillium Web"><div class="text">PLANEJAMENTO AMOSTRAL</div>
-            <div class="subtext">
-                <form method="get" action="#contato" style="text-align:center;">
-                    <button type="submit" style="background-color: rgba(0,0,0,0);
-                    border-color: #64030e; border-width: 5px; border-style: solid;
-                    height:80px; width:450px">
-                        <b>PEÇA UM ORÇAMENTO</b>
-                    </button>
-                </form>
-            </div>
-        </font>
-    </div>
-
-    <div class="mySlides">
-        <img class="slide" src="<?php echo base_url('assets/frontend/img/slider/slider1.jpg') ?>" style="width:100%;">
-        <font face="Titillium Web"><div class="text">PESQUISA DE OPINÃO E MERCADO</div>
-            <div class="subtext">
-                <form method="get" action="#contato" style="text-align:center;">
-                    <button type="submit" style="background-color: rgba(0,0,0,0);
-                    border-color: #64030e; border-width: 5px; border-style: solid;
-                    height:80px; width:450px">
-                        <b>PEÇA UM ORÇAMENTO</b>
-                    </button>
-                </form>
-            </div>
-        </font>
-    </div>
-
-    <div class="mySlides">
-        <img class="slide" src="<?php echo base_url('assets/frontend/img/slider/slider1.jpg') ?>" style="width:100%;">
-        <font face="Titillium Web"><div class="text">CONTROLE DE QUALIDADE</div>
-            <div class="subtext">
-                <form method="get" action="#contato" style="text-align:center;">
-                    <button type="submit" style="background-color: rgba(0,0,0,0);
-                    border-color: #64030e; border-width: 5px; border-style: solid;
-                    height:80px; width:450px">
-                        <b>PEÇA UM ORÇAMENTO</b>
-                    </button>
-                </form>
-            </div>
-        </font>
-    </div>
-
-    <div class="mySlides">
-        <img class="slide" src="<?php echo base_url('assets/frontend/img/slider/slider1.jpg') ?>" style="width:100%;">
-        <font face="Titillium Web"><div class="text">BIOESTATÍSTICA</div>
-            <div class="subtext">
-                <form method="get" action="#contato" style="text-align:center;">
-                    <button type="submit" style="background-color: rgba(0,0,0,0);
-                    border-color: #64030e; border-width: 5px; border-style: solid;
-                    height:80px; width:450px">
-                        <b>PEÇA UM ORÇAMENTO</b>
-                    </button>
-                </form>
-            </div>
-        </font>
-    </div>
-
-    <div class="mySlides">
-        <img class="slide" src="<?php echo base_url('assets/frontend/img/slider/slider1.jpg') ?>" style="width:100%;">
-        <font face="Titillium Web"><div class="text">GEOESTATÍSTICA</div>
-            <div class="subtext">
-                <form method="get" action="#contato" style="text-align:center;">
-                    <button type="submit" style="background-color: rgba(0,0,0,0);
-                    border-color: #64030e; border-width: 5px; border-style: solid;
-                    height:80px; width:450px">
-                        <b>PEÇA UM ORÇAMENTO</b>
-                    </button>
-                </form>
-            </div>
-        </font>
-    </div>
-
+    <?php
+    }
+    ?>
 
   <!-- Next and previous buttons -->
   <a class="prev" onclick="plusSlides(-1)" style="font-size:300%; text-decoration:none; color: #350606">&#10094;</a>

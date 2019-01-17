@@ -3,10 +3,10 @@
     <a href="#"><img src="<?php echo base_url('/assets/frontend/img/logo.png'); ?>"></a>
   </div>
   <div class="menu">
-      <a href="#">INICIO</a>  
+      <a href="#home">INICIO</a>
       <a href="#">QUEM SOMOS</a>
       <a href="#">SERVIÇOS</a>
       <a href="#">BLOG</a>
-      <a href="#">CONTATO</a>
+      <a href="#contato">CONTATO</a>
       </div>
 </div>
