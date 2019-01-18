@@ -22,11 +22,11 @@
 >>>>>>> f03ba2cf7b9b83d2e4b18715680ea6f7f05e9558
   </div>
   <div class="menu">
-      <a href="#">INICIO</a>  
+      <a href="#home">INICIO</a>
       <a href="#">QUEM SOMOS</a>
       <a href="#">SERVIÇOS</a>
       <a href="#">BLOG</a>
-      <a href="#">CONTATO</a>
+      <a href="#contato">CONTATO</a>
       </div>
 </div>
 <<<<<<< HEAD
