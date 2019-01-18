@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 07-Jan-2019 às 19:11
+-- Generation Time: 17-Jan-2019 às 21:13
 -- Versão do servidor: 10.1.37-MariaDB
 -- versão do PHP: 7.3.0
 
@@ -147,11 +147,25 @@ CREATE TABLE `servico` (
 
 CREATE TABLE `slider` (
   `id` int(11) NOT NULL,
-  `imagem` longtext NOT NULL,
+  `imagem` int(11) NOT NULL,
   `titulo` varchar(150) DEFAULT NULL,
   `subtitulo` varchar(150) DEFAULT NULL,
   `link` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `slider`
+--
+
+INSERT INTO `slider` (`id`, `imagem`, `titulo`, `subtitulo`, `link`) VALUES
+(1, 1, 'ANÁLISES ACADÊMICAS', 'PEÇA UM ORÇAMENTO', '#contato'),
+(2, 1, 'MODELAGEM ESTATÍSTICA', 'PEÇA UM ORÇAMENTO', '#contato'),
+(3, 1, 'ESTATÍSTICA DESCRITIVA', 'PEÇA UM ORÇAMENTO', '#contato'),
+(4, 1, 'PLANEJAMENTO AMOSTRAL', 'PEÇA UM ORÇAMENTO', '#contato'),
+(5, 1, 'PESQUISA DE OPINÃO E MERCADO', 'PEÇA UM ORÇAMENTO', '#contato'),
+(6, 1, 'CONTROLE DE QUALIDADE', 'PEÇA UM ORÇAMENTO', '#contato'),
+(7, 1, 'BIOESTATÍSTICA', 'PEÇA UM ORÇAMENTO', '#contato'),
+(8, 1, 'GEOESTATÍSTICA', 'PEÇA UM ORÇAMENTO', '#contato');
 
 -- --------------------------------------------------------
 
@@ -279,7 +293,7 @@ ALTER TABLE `projeto`
 -- AUTO_INCREMENT for table `slider`
 --
 ALTER TABLE `slider`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `sobre_nos`
