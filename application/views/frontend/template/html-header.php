@@ -13,7 +13,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
 
 	<link href="<?php echo base_url('assets/frontend/css/style.css') ?>" rel="stylesheet">
-	<link href="<?php echo base_url('assets/frontend/css/sliderEst.css') ?>" rel="stylesheet">
+	<link href="<?php echo base_url('assets/frontend/css/slider.css') ?>" rel="stylesheet">
 	<link href="<?php echo base_url('assets/frontend/css/scrollbar.css') ?>" rel="stylesheet">
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
