@@ -35,7 +35,7 @@
     color: #350606;
     overflow: hidden;
     padding:5px;
-    text-decoration:none; 
+    text-decoration:none;
     font-size: 25px;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
@@ -60,7 +60,7 @@
     text-align: center;
     font-family: 'Titillium Web', sans-serif;
     color: #f5f5f5;
-    font-weight: bold;   
+    font-weight: bold;
 }
 .content{
     display: flex;
@@ -83,7 +83,7 @@
     margin: 2px;
 }
 .map{
-    width: 60%    
+    width: 60%
 }
 .container button{
     float: right;
@@ -108,21 +108,21 @@
     text-decoration: none;
     border-radius: 50%;
   }
-  
+
   /* Add a hover effect if you want */
   .fa:hover {
     background: #222;
     color: #f5f5f5;
   }
-  
+
   /* Set a specific color for each brand */
-  
+
   /* Facebook */
   .fa-facebook {
     background: #f5f5f5;
     color: #222;
   }
-  
+
   /* Twitter */
   .fa-instagram {
     background: #f5f5f5;
