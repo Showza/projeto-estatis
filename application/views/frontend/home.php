@@ -1,11 +1,18 @@
 <!-- Slideshow container -->
-<div class="slideshow-container" id="home">
+<div class="slideshow-container" id="home" style="overflow:hidden; margin-top:-20px; margin-bottom: -20px">
 
     <style>
         .slide {
             -webkit-filter: blur(3px) invert(30%) grayscale(50%) brightness(70%) contrast(4);
             filter: blur(3px) invert(30%) grayscale(50%) brightness(70%) contrast(4);
+            transform:scale(1.1);
         }
+        @media (max-width: 768px) {
+			.slideimg {
+				width:100% !important;
+				height:250px !important;
+			}
+		}
     </style>
 
     <!-- Full-width images with number and caption text -->
@@ -13,13 +20,13 @@
 	  foreach($slider as $slides){
 	?>
     <div class="mySlides">
-        <img class="slide" src="<?php echo base_url('assets/frontend/img/slider/'.$slides->imagem.'.jpg') ?>" style="width:100%;">
+        <img class="slide slideimg" src="<?php echo base_url('assets/frontend/img/slider/'.$slides->id.'.jpg') ?>" style="width:100%; height:800px">
         <font face="Titillium Web"><div class="text"><?php echo $slides->titulo ?></div>
             <div class="subtext">
                 <form method="get" action="<?php echo limpar($slides->link) ?>" style="text-align:center;">
                     <button type="submit" style="background-color: rgba(0,0,0,0);
-                    border-color: #64030e; border-width: 5px; border-style: solid;
-                    height:80px; width:450px">
+                    border-color: #64030e; border-width: 0.3vw; border-style: solid;
+                    display:inline-block; padding:0.5em 2em;">
                         <b><?php echo $slides->subtitulo ?></b>
                     </button>
                 </form>
