@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?php echo $titulo.' - '.$subtitulo ?></title>
+    <title><?php echo $titulo.' | '.$subtitulo ?></title>
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url('assets/frontend/img/logo.png') ?>">
 
     <!-- Bootstrap Core CSS -->
