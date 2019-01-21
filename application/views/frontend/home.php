@@ -18,16 +18,23 @@
     <!-- Full-width images with number and caption text -->
     <?php
 	  foreach($slider as $slides){
+          if($slides->imagem == 1){
+              $fotoslide = base_url("assets/frontend/img/slider/".md5($slides->id).".jpg");
+          }
+          // sem o else permanece a imagem do último slide, caso nao haja imagem
+          // else {
+          //     $fotoslide = null;
+          // }
 	?>
     <div class="mySlides">
-        <img class="slide slideimg" src="<?php echo base_url('assets/frontend/img/slider/'.$slides->id.'.jpg') ?>" style="width:100%; height:800px">
+        <img class="slide slideimg" src="<?php echo $fotoslide ?>" style="width:100%; height:800px;">
         <font face="Titillium Web"><div class="text"><?php echo $slides->titulo ?></div>
             <div class="subtext">
                 <form method="get" action="<?php echo limpar($slides->link) ?>" style="text-align:center;">
                     <button type="submit" style="background-color: rgba(0,0,0,0);
                     border-color: #64030e; border-width: 0.3vw; border-style: solid;
                     display:inline-block; padding:0.5em 2em;">
-                        <b><?php echo $slides->subtitulo ?></b>
+                        <b style="text-shadow: 2px 2px 8px #000000;"><?php echo $slides->subtitulo ?></b>
                     </button>
                 </form>
             </div>
