@@ -10,7 +10,7 @@
 */
 .navbar{
     padding: 1px;
-    background-color: #f1f1f1;
+    background-color: #F5F5DD;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -50,7 +50,7 @@
 */
 
 #depoimentos{
-    background-color: #350606;
+    background-color: #64030E;
     padding: 10px;
 }
 .content-depo{
@@ -60,25 +60,29 @@
     width: 100%;
     height: 500px;
     justify-content: center;
+    background-color: #64030E;
 
 }
 .depo1{
     width: 40%;
     height: 80%;
     border-radius: 25px;
-    background: #573131;
+    background: #AF7C81;
     margin-right: 5px;
 }
 .depo2{
     width: 40%;
     height: 50%;
     border-radius: 25px;
-    background: #3d1c1c;
+    background: #723640;
 }
 .depo-txt{
     text-align: center;
     padding: 10%;
-    color: #fff;
+    color: #111;
+    font-weight: 150;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
 
 }
 
