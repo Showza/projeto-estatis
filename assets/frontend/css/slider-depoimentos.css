@@ -28,7 +28,9 @@
     bottom: 0px;
     margin-right: -19px;
 }
-
+#depoimentos .row i:hover{
+    background-color: transparent;
+}
 
 .carousel-inner {
     min-height: 300px;
