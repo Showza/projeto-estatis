@@ -1,6 +1,6 @@
 	<div class="divmaster">
 		<section class="titulo">
-			<h2>SOBRE NÓS</h2>
+			<h1>SOBRE NÓS</h1>
 			<hr>
 			<p> klakljajklsdakljfasdjfsdaklasdkljfdlja
 					fsdafakjfhdakjshfdkas
@@ -8,7 +8,7 @@
 					afsdkjsadhfkjasjlfskjhfdaj
 				afsdkjdjfdsafsdfdsjkfsdajfsdahfdskl
 			</p>
-			<ul>
+			<ul class="img">
 				<li>
 					<img src="<?php echo base_url('/assets/frontend/img/missao2.png'); ?>">
 					<h4>MISSÃO</h4>

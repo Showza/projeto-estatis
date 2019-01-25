@@ -195,7 +195,6 @@
     SOBRE NOS
 */
 .divmaster{
-
     background-image: url(../img/quemsomos.jpg);
     opacity: 1; 
     width: 1500px;
@@ -204,38 +203,33 @@
     background-size: cover;
     background-repeat: no-repeat;
     margin:0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 100px 50px;
-    color: white;
-    text-align: center;
-    align-items: center;
 
 }
 .titulo{
+    padding-top: 50px;
+    padding-bottom: 0px;
     display: flex;
+    flex-direction: row;
     flex-direction: column;
     align-items: center;
-    padding: 100px 50px;
     color: white;
     text-align: center;
-    align-items: center;
-
 }
 
-.titulo h2{
-    font-size: 2rem;
+.titulo h1{
+    font-size: 4rem;
     margin-bottom: 35px;
+    align-items: center;
     
 }
 .titulo p{
     max-width: 800px;
     margin-bottom: 35px;
     text-align: center;
+    align-items: center;
 }
 .titulo hr{
-    width: 50px;
+    width: 100px;
     height: 2px;
     background-color: #fff;
     margin-bottom: 70px;
@@ -244,17 +238,15 @@
 .img{
     width: 50%;
     display: flex;
+    align-items: center;
+}
+.img li {
+    padding: 20px 50px;
+    display: flex;
     flex-direction: row;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    list-style: none;
-}
-.img li {
-    padding: 0 30px;
-    align-items: center;
     text-align: center;
-    justify-content: flex-end;
     list-style: none;
 }
 
