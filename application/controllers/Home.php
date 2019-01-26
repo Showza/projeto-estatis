@@ -21,7 +21,7 @@
 
             $this->load->view('frontend/template/html-header', $dados);
             $this->load->view('frontend/template/header');
-            $this->load->view('frontend/home');
+            $this->load->view('frontend/depoimentos');
             $this->load->view('frontend/template/footer');
             $this->load->view('frontend/template/html-footer');
         }

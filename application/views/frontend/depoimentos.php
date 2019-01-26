@@ -30,7 +30,7 @@
                                             <h5><?php echo $depoimento->empresa?> </h5>
                                         </div>
                                     </div>
- <!-- aldskjf                                    
+                                    
                                     <div class="depo2">
                                         <p class="depo-txt"><?php echo $depoimento->descricao?> </p>
                                         <div class="author-depo">
@@ -38,7 +38,6 @@
                                             <h5><?php echo $depoimento->empresa?> </h5>
                                         </div>
                                     </div>
--->
 
                                 </div>
                         </div>
