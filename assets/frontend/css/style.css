@@ -55,7 +55,7 @@
 */
 
 #depoimentos{
-    background-color: #64030E;
+    background-color: #350606;
     padding: 1%;
 }
 .content-depo{
@@ -63,8 +63,8 @@
     flex-direction: row;
     width: 100%;
     justify-content: center;
-    background-color: #64030E;
-    padding: 2%;
+    padding: 1%;
+    align-content: stretch;
 }
 .content-depo h4, .content-depo h5{
     text-align: initial;
@@ -75,13 +75,13 @@
 }
 .depo1{
     width: 40%;
-    border-radius: 25px;
-    background: #AF7C81;
+    border-radius: 10px;
+    background: #f1f1f1;
     margin-right: 1%;
 }
 .depo2{
     width: 40%;
-    border-radius: 25px;
+    border-radius: 10px;
     background: #723640;
 }
 .author-depo{
@@ -108,8 +108,8 @@
 
 .footer{
     background-color: #350606;
-    padding: 7px;
     margin:0;
+    padding: 0.01%;
 }
 .subtitle{
     font-size: 35px;
