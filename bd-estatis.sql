@@ -1,47 +1,32 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
--- https://www.phpmyadmin.net/
+-- version 4.4.3
+-- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: 17-Jan-2019 às 21:13
--- Versão do servidor: 10.1.37-MariaDB
--- versão do PHP: 7.3.0
+-- Host: localhost
+-- Tempo de geração: 26/01/2019 às 15:52
+-- Versão do servidor: 5.6.24
+-- Versão do PHP: 5.6.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
--- Database: `bd-estatis`
+-- Banco de dados: `bd-estatis`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `cliente_op`
+-- Estrutura para tabela `contato`
 --
 
-CREATE TABLE `cliente_op` (
-  `id` int(11) NOT NULL,
-  `nome` varchar(150) NOT NULL,
-  `email` varchar(200) DEFAULT NULL,
-  `opniao` longtext NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `contato`
---
-
-CREATE TABLE `contato` (
+CREATE TABLE IF NOT EXISTS `contato` (
   `id` int(11) NOT NULL,
   `nome` varchar(150) NOT NULL,
   `email` varchar(200) NOT NULL
@@ -50,10 +35,34 @@ CREATE TABLE `contato` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `foto`
+-- Estrutura para tabela `depoimento`
 --
 
-CREATE TABLE `foto` (
+CREATE TABLE IF NOT EXISTS `depoimento` (
+  `id` int(11) NOT NULL,
+  `autor` varchar(150) NOT NULL,
+  `email` varchar(200) DEFAULT NULL,
+  `descricao` longtext NOT NULL,
+  `empresa` varchar(50) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+--
+-- Fazendo dump de dados para tabela `depoimento`
+--
+
+INSERT INTO `depoimento` (`id`, `autor`, `email`, `descricao`, `empresa`) VALUES
+(1, 'Rogerd', NULL, 'ótimo trabalho', 'CEO do Facebook'),
+(2, 'Teste', NULL, 'teste teste ', 'Voluta'),
+(3, 'aslçkdfj salkdflksd jlskd ', NULL, 'alskdjf lkasdf lkasf dlkasjd fjklsadf ', 'alkdfj ljkas dflksda fljkd lkdfsa '),
+(4, 'José', NULL, 'testeaadfadfadf asdfa dasfsdfret4345343 t3t34t', 'Diretor - Google');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `foto`
+--
+
+CREATE TABLE IF NOT EXISTS `foto` (
   `id` int(11) NOT NULL,
   `nome` varchar(150) CHARACTER SET utf8 NOT NULL,
   `id_galeria` int(11) NOT NULL
@@ -62,10 +71,10 @@ CREATE TABLE `foto` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `galeria`
+-- Estrutura para tabela `galeria`
 --
 
-CREATE TABLE `galeria` (
+CREATE TABLE IF NOT EXISTS `galeria` (
   `id` int(11) NOT NULL,
   `nome` varchar(150) NOT NULL,
   `descrição` longtext,
@@ -75,10 +84,10 @@ CREATE TABLE `galeria` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `login`
+-- Estrutura para tabela `login`
 --
 
-CREATE TABLE `login` (
+CREATE TABLE IF NOT EXISTS `login` (
   `id` int(11) NOT NULL,
   `user` varchar(150) NOT NULL,
   `senha` longtext NOT NULL
@@ -87,10 +96,10 @@ CREATE TABLE `login` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `postagem`
+-- Estrutura para tabela `postagem`
 --
 
-CREATE TABLE `postagem` (
+CREATE TABLE IF NOT EXISTS `postagem` (
   `id` int(11) NOT NULL,
   `titulo` varchar(150) NOT NULL,
   `subtitulo` varchar(150) DEFAULT NULL,
@@ -102,10 +111,10 @@ CREATE TABLE `postagem` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `processo_seletivo`
+-- Estrutura para tabela `processo_seletivo`
 --
 
-CREATE TABLE `processo_seletivo` (
+CREATE TABLE IF NOT EXISTS `processo_seletivo` (
   `id` int(11) NOT NULL,
   `nome` varchar(150) NOT NULL,
   `email` varchar(200) NOT NULL,
@@ -117,10 +126,10 @@ CREATE TABLE `processo_seletivo` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `projeto`
+-- Estrutura para tabela `projeto`
 --
 
-CREATE TABLE `projeto` (
+CREATE TABLE IF NOT EXISTS `projeto` (
   `id` int(11) NOT NULL,
   `nome` varchar(150) NOT NULL,
   `descrição` longtext NOT NULL
@@ -129,10 +138,10 @@ CREATE TABLE `projeto` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `servico`
+-- Estrutura para tabela `servico`
 --
 
-CREATE TABLE `servico` (
+CREATE TABLE IF NOT EXISTS `servico` (
   `id` int(11) NOT NULL,
   `nome` varchar(150) NOT NULL,
   `descricao` longtext NOT NULL,
@@ -142,19 +151,19 @@ CREATE TABLE `servico` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `slider`
+-- Estrutura para tabela `slider`
 --
 
-CREATE TABLE `slider` (
+CREATE TABLE IF NOT EXISTS `slider` (
   `id` int(11) NOT NULL,
   `imagem` int(11) NOT NULL,
   `titulo` varchar(150) DEFAULT NULL,
   `subtitulo` varchar(150) DEFAULT NULL,
   `link` longtext NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 --
--- Extraindo dados da tabela `slider`
+-- Fazendo dump de dados para tabela `slider`
 --
 
 INSERT INTO `slider` (`id`, `imagem`, `titulo`, `subtitulo`, `link`) VALUES
@@ -170,147 +179,138 @@ INSERT INTO `slider` (`id`, `imagem`, `titulo`, `subtitulo`, `link`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `sobre_nos`
+-- Estrutura para tabela `sobre_nos`
 --
 
-CREATE TABLE `sobre_nos` (
+CREATE TABLE IF NOT EXISTS `sobre_nos` (
   `id` int(11) NOT NULL,
   `descricao` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Indexes for dumped tables
+-- Índices de tabelas apagadas
 --
 
 --
--- Indexes for table `cliente_op`
---
-ALTER TABLE `cliente_op`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `contato`
+-- Índices de tabela `contato`
 --
 ALTER TABLE `contato`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `foto`
+-- Índices de tabela `depoimento`
+--
+ALTER TABLE `depoimento`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Índices de tabela `foto`
 --
 ALTER TABLE `foto`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_fk_galeria` (`id_galeria`);
 
 --
--- Indexes for table `galeria`
+-- Índices de tabela `galeria`
 --
 ALTER TABLE `galeria`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `login`
+-- Índices de tabela `login`
 --
 ALTER TABLE `login`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `postagem`
+-- Índices de tabela `postagem`
 --
 ALTER TABLE `postagem`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `processo_seletivo`
+-- Índices de tabela `processo_seletivo`
 --
 ALTER TABLE `processo_seletivo`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `projeto`
+-- Índices de tabela `projeto`
 --
 ALTER TABLE `projeto`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `servico`
+-- Índices de tabela `servico`
 --
 ALTER TABLE `servico`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `slider`
+-- Índices de tabela `slider`
 --
 ALTER TABLE `slider`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `sobre_nos`
+-- Índices de tabela `sobre_nos`
 --
 ALTER TABLE `sobre_nos`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de tabelas apagadas
 --
 
 --
--- AUTO_INCREMENT for table `cliente_op`
+-- AUTO_INCREMENT de tabela `depoimento`
 --
-ALTER TABLE `cliente_op`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
+ALTER TABLE `depoimento`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
--- AUTO_INCREMENT for table `galeria`
+-- AUTO_INCREMENT de tabela `galeria`
 --
 ALTER TABLE `galeria`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
--- AUTO_INCREMENT for table `login`
+-- AUTO_INCREMENT de tabela `login`
 --
 ALTER TABLE `login`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
--- AUTO_INCREMENT for table `postagem`
+-- AUTO_INCREMENT de tabela `postagem`
 --
 ALTER TABLE `postagem`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
--- AUTO_INCREMENT for table `processo_seletivo`
+-- AUTO_INCREMENT de tabela `processo_seletivo`
 --
 ALTER TABLE `processo_seletivo`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
--- AUTO_INCREMENT for table `projeto`
+-- AUTO_INCREMENT de tabela `projeto`
 --
 ALTER TABLE `projeto`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
--- AUTO_INCREMENT for table `slider`
+-- AUTO_INCREMENT de tabela `slider`
 --
 ALTER TABLE `slider`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 --
--- AUTO_INCREMENT for table `sobre_nos`
+-- AUTO_INCREMENT de tabela `sobre_nos`
 --
 ALTER TABLE `sobre_nos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- Restrições para dumps de tabelas
+--
 
 --
--- Constraints for dumped tables
---
-
---
--- Limitadores para a tabela `foto`
+-- Restrições para tabelas `foto`
 --
 ALTER TABLE `foto`
   ADD CONSTRAINT `id_fk_galeria` FOREIGN KEY (`id_galeria`) REFERENCES `galeria` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -1,6 +1,5 @@
 <!-- Slideshow container -->
 <div class="slideshow-container" id="home" style="overflow:hidden; margin-top:-20px; margin-bottom: -20px">
-
     <style>
         .slide {
             -webkit-filter: blur(3px) invert(30%) grayscale(50%) brightness(70%) contrast(4);
