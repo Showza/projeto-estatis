@@ -29,7 +29,7 @@
                         <a href="<?php echo base_url('admin/projetos_servicos') ?>"><i class="fa fa-clipboard fa-fw"></i>Projetos e Serviços</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('admin/sobre_nos') ?>"><i class="fa fa-pencil fa-fw"></i> Sobre Nós</a>
+                        <a href="<?php echo base_url('admin/sobrenos') ?>"><i class="fa fa-pencil fa-fw"></i> Sobre Nós</a>
                     </li>
                     <li>
                         <a href="<?php echo base_url('admin/processo_seletivo') ?>"><i class="fa fa-coffee fa-fw"></i> Processo Seletivo</a>
