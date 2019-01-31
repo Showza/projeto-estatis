@@ -35,7 +35,7 @@
                         <a href="<?php echo base_url('admin/processo_seletivo') ?>"><i class="fa fa-coffee fa-fw"></i> Processo Seletivo</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('admin/cliente_op') ?>"><i class="fa fa-thumbs-o-up fa-fw"></i> Opniões de Clientes</a>
+                        <a href="<?php echo base_url('admin/depoimentos') ?>"><i class="fa fa-thumbs-o-up fa-fw"></i> Opniões de Clientes</a>
                     </li>
                     <li>
                         <a href="<?php echo base_url('admin/contato') ?>"><i class="fa fa-at fa-fw"></i> Contato</a>
