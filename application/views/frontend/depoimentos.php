@@ -14,5 +14,5 @@
             </div>
     <?php $i++; } ?>
 
-    <hr>
 </div>
+<hr style="margin:0px;">
