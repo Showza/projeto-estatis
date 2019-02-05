@@ -21,7 +21,7 @@
                                     $nomeproj= $sobre->descricao;
                                     $alterar= anchor(base_url('admin/sobrenos/alterar/'.md5($sobre->id)), '<i class="fa fa-refresh fa-fw"></i> Alterar');
 
-                                    
+
 
                                     $this->table->add_row($nomeproj, $alterar);
                                 }
@@ -78,7 +78,7 @@
                                 $this->table->set_template(array('table_open' => '<table class="table table-striped">'));
                                    echo $this->table->generate();
                             ?>
-                                          
+
                         </div>
 
                     </div>
