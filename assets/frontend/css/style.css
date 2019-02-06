@@ -10,7 +10,7 @@
 */
 .navbar{
     padding: 1px;
-    background-color: #FFFFE0;
+    background-color: #EBEDEF;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -38,7 +38,7 @@
     text-decoration:none;
     font-size: 18px;
     font-weight: bold;
-    font-family: 'Blooming Elegant', 'Arial';
+    font-family: 'Titillium Web', 'Arial';
 }
 .menu a:hover{
     color: #111;
@@ -95,7 +95,7 @@
     padding: 5%;
     color: #111;
     font-weight: 150;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Titillium Web', Courier, monospace;
     font-size: 15px;
 }
 
@@ -213,6 +213,7 @@
     align-items: center;
     color: white;
     text-align: center;
+    font-family: 'Titillium Web';
 }
 
 .titulo h1{

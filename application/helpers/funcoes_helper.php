@@ -59,5 +59,5 @@ function postadoem($string) {
     }
     $ano = date('Y', strtotime($string));
     $hora = date('H:i', strtotime($string));
-    return $semana . ', ' . $dia . ' de ' . $mes . ' de ' . $ano . ', ' . $hora;
+    return $semana . ', ' . $dia . ' de ' . $mes . ' de ' . $ano . ' às ' . $hora;
 }
