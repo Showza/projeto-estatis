@@ -70,8 +70,7 @@
         <div class="col-lg-12">
             <center>
                 <font face="Consolas">
-                <p>Desenvolvido por Voluta Soluções Digitais</p>
-                <p>Copyright &reg;</p>
+                <p>Desenvolvido por Voluta Soluções Digitais | Copyright &reg;</p>
                 </font>
             </center>
         </div>
