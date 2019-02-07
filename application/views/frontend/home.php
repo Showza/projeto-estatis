@@ -1,3 +1,6 @@
+<div id="voltarTopo">
+	<a href="#" id="subir" style="text-decoration:none; color: #820e0e; z-index: 9999;"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
+</div>
 <!-- Slideshow container -->
 <div class="slideshow-container" id="home" style="overflow:hidden; margin-top:-20px; margin-bottom: -20px">
     <style>

@@ -1,32 +1,34 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.3
--- http://www.phpmyadmin.net
+-- version 4.8.4
+-- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Tempo de geração: 26/01/2019 às 15:52
--- Versão do servidor: 5.6.24
--- Versão do PHP: 5.6.8
+-- Host: 127.0.0.1
+-- Generation Time: 06-Fev-2019 às 21:56
+-- Versão do servidor: 10.1.37-MariaDB
+-- versão do PHP: 7.3.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `bd-estatis`
+-- Database: `bd-estatis`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `contato`
+-- Estrutura da tabela `contato`
 --
 
-CREATE TABLE IF NOT EXISTS `contato` (
+CREATE TABLE `contato` (
   `id` int(11) NOT NULL,
   `nome` varchar(150) NOT NULL,
   `email` varchar(200) NOT NULL
@@ -35,19 +37,19 @@ CREATE TABLE IF NOT EXISTS `contato` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `depoimento`
+-- Estrutura da tabela `depoimento`
 --
 
-CREATE TABLE IF NOT EXISTS `depoimento` (
+CREATE TABLE `depoimento` (
   `id` int(11) NOT NULL,
   `autor` varchar(150) NOT NULL,
   `email` varchar(200) DEFAULT NULL,
   `descricao` longtext NOT NULL,
   `empresa` varchar(50) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Fazendo dump de dados para tabela `depoimento`
+-- Extraindo dados da tabela `depoimento`
 --
 
 INSERT INTO `depoimento` (`id`, `autor`, `email`, `descricao`, `empresa`) VALUES
@@ -59,10 +61,10 @@ INSERT INTO `depoimento` (`id`, `autor`, `email`, `descricao`, `empresa`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `foto`
+-- Estrutura da tabela `foto`
 --
 
-CREATE TABLE IF NOT EXISTS `foto` (
+CREATE TABLE `foto` (
   `id` int(11) NOT NULL,
   `nome` varchar(150) CHARACTER SET utf8 NOT NULL,
   `id_galeria` int(11) NOT NULL
@@ -71,10 +73,10 @@ CREATE TABLE IF NOT EXISTS `foto` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `galeria`
+-- Estrutura da tabela `galeria`
 --
 
-CREATE TABLE IF NOT EXISTS `galeria` (
+CREATE TABLE `galeria` (
   `id` int(11) NOT NULL,
   `nome` varchar(150) NOT NULL,
   `descrição` longtext,
@@ -84,10 +86,10 @@ CREATE TABLE IF NOT EXISTS `galeria` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `login`
+-- Estrutura da tabela `login`
 --
 
-CREATE TABLE IF NOT EXISTS `login` (
+CREATE TABLE `login` (
   `id` int(11) NOT NULL,
   `user` varchar(150) NOT NULL,
   `senha` longtext NOT NULL
@@ -96,25 +98,37 @@ CREATE TABLE IF NOT EXISTS `login` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `postagem`
+-- Estrutura da tabela `postagem`
 --
 
-CREATE TABLE IF NOT EXISTS `postagem` (
+CREATE TABLE `postagem` (
   `id` int(11) NOT NULL,
   `titulo` varchar(150) NOT NULL,
   `subtitulo` varchar(150) DEFAULT NULL,
   `conteudo` longtext NOT NULL,
+  `autor` varchar(200) NOT NULL,
   `data` datetime NOT NULL,
-  `imagem` longtext
+  `imagem` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `postagem`
+--
+
+INSERT INTO `postagem` (`id`, `titulo`, `subtitulo`, `conteudo`, `autor`, `data`, `imagem`) VALUES
+(1, 'Nunc magna mauris, aliquam id dapibus et, egestas finibus lorem', 'Duis finibus, felis semper suscipit convallis, orci ante eleifend lectus, ac pharetra ipsum risus in elit. Vestibulum enim turpis, suscipit eget lacus', 'Sed velit ex, sodales nec aliquet sed, imperdiet ac justo. Vestibulum gravida lacus eu turpis interdum cursus. Morbi ultricies libero sed nibh pulvinar elementum. Fusce vestibulum, orci quis laoreet lobortis, enim lorem sollicitudin augue, eu imperdiet eros neque id leo. In id enim ornare, bibendum tortor vitae, pellentesque nibh. Donec odio neque, sodales eu nibh eget, posuere pharetra erat. Sed luctus felis ac risus gravida, ac condimentum diam commodo. Maecenas sit amet lectus vitae magna gravida dictum. Cras iaculis in augue eget sagittis. Maecenas gravida felis sed est bibendum, nec ultricies nunc porttitor.\r\nCurabitur pretium justo dui, non porta ante ultrices at. Duis finibus, felis semper suscipit convallis, orci ante eleifend lectus, ac pharetra ipsum risus in elit. Vestibulum enim turpis, suscipit eget lacus vitae, posuere posuere ante. Nunc nec ligula facilisis, eleifend ipsum non, pulvinar nulla. Pellentesque pharetra at nulla eget elementum. Pellentesque vel tristique diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.', 'bacon', '2019-02-06 00:00:00', 1),
+(2, 'Ut consectetur lacus augue, tincidunt finibus nulla convallis eget', 'Your not gonna be picking a fight, Dad, dad dad daddy-o. You\'re coming to a rescue, right? Okay, let\'s go', 'That\'s right, he\'s gonna be mayor. Whoa, they really cleaned this place up, looks brand new. My insurance, it\'s your car, your insurance should pay for it. Hey, I wanna know who\'s gonna pay for this? I spilled beer all over it when that car smashed into me. Who\'s gonna pay my cleaning bill? Yes, yes, I\'m George, George McFly, and I\'m your density. I mean, I\'m your destiny. It\'s uh, the other end of town, a block past Maple.', 'gabriel', '2017-03-11 16:14:36', NULL),
+(3, 'Curabitur eu mauris id neque ultricies feugiat a ut mi', 'Duis finibus, felis semper suscipit convallis, orci ante eleifend lectus, ac pharetra ipsum risus in elit. Vestibulum enim turpis, suscipit eget lacus', 'Nunc magna mauris, aliquam id dapibus et, egestas finibus lorem. Mauris at condimentum dolor. Curabitur eu mauris id neque ultricies feugiat a ut mi. Ut posuere faucibus nisl, sed sagittis tellus laoreet quis. Pellentesque molestie euismod tempus. Aliquam mattis, velit eget consequat maximus, mauris lectus scelerisque diam, eget volutpat ligula est fermentum odio. Vestibulum nisi libero, malesuada ut congue vel, efficitur sit amet mi. Cras pellentesque egestas volutpat. Aliquam venenatis ullamcorper felis nec cursus. Praesent lacinia laoreet ante, et hendrerit nisi. In hac habitasse platea dictumst.\r\n\r\nUt consectetur lacus augue, tincidunt finibus nulla convallis eget. Donec rutrum aliquam quam at ultricies. Maecenas at dignissim ex, nec semper urna. Nunc id lacus vel nisl mollis auctor. Etiam vulputate gravida porttitor. Quisque at lobortis quam, id pulvinar nunc. Cras finibus, nisl eget pulvinar egestas, neque nibh sollicitudin velit, eget efficitur neque urna non justo. Sed vehicula non velit sed viverra. Vestibulum lacinia neque et mattis dictum. Sed rhoncus dapibus nisl id fringilla. Duis quis sagittis augue. Morbi accumsan tellus ipsum, et vulputate lectus sagittis quis. Mauris eu sem justo.\r\n\r\nPhasellus quis vehicula tortor. Vestibulum sed purus et mauris tempor posuere. Vivamus vel commodo ipsum. Donec a tristique tellus. In lobortis, tortor et rhoncus rhoncus, metus libero mollis sem, id tincidunt ipsum tortor ut eros. Nullam faucibus, turpis ut egestas interdum, mi risus eleifend dui, a mollis magna enim vel odio. In lobortis, erat et luctus lobortis, nulla neque imperdiet tellus, nec varius nisi lacus id dolor. Suspendisse tempus dictum dolor ac vestibulum. Fusce tincidunt eu ipsum varius ultricies. Donec commodo bibendum consequat. Suspendisse potenti. Nam in ultricies risus.', 'alguem', '2019-02-03 00:00:00', 1),
+(4, 'Vestibulum sed purus et mauris tempor posuere', 'Donec odio neque, sodales eu nibh eget, posuere pharetra erat. Sed luctus felis ac risus gravida, ac condimentum diam commodo.', 'That\'s right, he\'s gonna be mayor. Whoa, they really cleaned this place up, looks brand new. My insurance, it\'s your car, your insurance should pay for it. Hey, I wanna know who\'s gonna pay for this? I spilled beer all over it when that car smashed into me. Who\'s gonna pay my cleaning bill? Yes, yes, I\'m George, George McFly, and I\'m your density. I mean, I\'m your destiny. It\'s uh, the other end of town, a block past Maple.', 'teste', '2019-02-21 00:00:00', 1),
+(5, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', 'Your not gonna be picking a fight, Dad, dad dad daddy-o. You\'re coming to a rescue, right? Okay, let\'s go', 'Nunc magna mauris, aliquam id dapibus et, egestas finibus lorem. Mauris at condimentum dolor. Curabitur eu mauris id neque ultricies feugiat a ut mi. Ut posuere faucibus nisl, sed sagittis tellus laoreet quis. Pellentesque molestie euismod tempus. Aliquam mattis, velit eget consequat maximus, mauris lectus scelerisque diam, eget volutpat ligula est fermentum odio. Vestibulum nisi libero, malesuada ut congue vel, efficitur sit amet mi. Cras pellentesque egestas volutpat. Aliquam venenatis ullamcorper felis nec cursus. Praesent lacinia laoreet ante, et hendrerit nisi. In hac habitasse platea dictumst.</p>\r\n\r\nUt consectetur lacus augue, tincidunt finibus nulla convallis eget. Donec rutrum aliquam quam at ultricies. Maecenas at dignissim ex, nec semper urna. Nunc id lacus vel nisl mollis auctor. Etiam vulputate gravida porttitor. Quisque at lobortis quam, id pulvinar nunc. Cras finibus, nisl eget pulvinar egestas, neque nibh sollicitudin velit, eget efficitur neque urna non justo. Sed vehicula non velit sed viverra. Vestibulum lacinia neque et mattis dictum. Sed rhoncus dapibus nisl id fringilla. Duis quis sagittis augue. Morbi accumsan tellus ipsum, et vulputate lectus sagittis quis. Mauris eu sem justo.\r\n\r\nPhasellus quis vehicula tortor. Vestibulum sed purus et mauris tempor posuere. Vivamus vel commodo ipsum. Donec a tristique tellus. In lobortis, tortor et rhoncus rhoncus, metus libero mollis sem, id tincidunt ipsum tortor ut eros. Nullam faucibus, turpis ut egestas interdum, mi risus eleifend dui, a mollis magna enim vel odio. In lobortis, erat et luctus lobortis, nulla neque imperdiet tellus, nec varius nisi lacus id dolor. Suspendisse tempus dictum dolor ac vestibulum. Fusce tincidunt eu ipsum varius ultricies. Donec commodo bibendum consequat. Suspendisse potenti. Nam in ultricies risus.', 'testando', '2017-03-08 16:14:36', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `processo_seletivo`
+-- Estrutura da tabela `processo_seletivo`
 --
 
-CREATE TABLE IF NOT EXISTS `processo_seletivo` (
+CREATE TABLE `processo_seletivo` (
   `id` int(11) NOT NULL,
   `nome` varchar(150) NOT NULL,
   `email` varchar(200) NOT NULL,
@@ -126,10 +140,10 @@ CREATE TABLE IF NOT EXISTS `processo_seletivo` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `projeto`
+-- Estrutura da tabela `projeto`
 --
 
-CREATE TABLE IF NOT EXISTS `projeto` (
+CREATE TABLE `projeto` (
   `id` int(11) NOT NULL,
   `nome` varchar(150) NOT NULL,
   `descrição` longtext NOT NULL
@@ -138,32 +152,40 @@ CREATE TABLE IF NOT EXISTS `projeto` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `servico`
+-- Estrutura da tabela `servicos`
 --
 
-CREATE TABLE IF NOT EXISTS `servico` (
+CREATE TABLE `servicos` (
   `id` int(11) NOT NULL,
   `nome` varchar(150) NOT NULL,
   `descricao` longtext NOT NULL,
-  `imagem` longtext
+  `imagem` longtext,
+  `modalidade` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `servicos`
+--
+
+INSERT INTO `servicos` (`id`, `nome`, `descricao`, `imagem`, `modalidade`) VALUES
+(0, 'teste', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'Web_1920___1.png', 'Projeto');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `slider`
+-- Estrutura da tabela `slider`
 --
 
-CREATE TABLE IF NOT EXISTS `slider` (
+CREATE TABLE `slider` (
   `id` int(11) NOT NULL,
   `imagem` int(11) NOT NULL,
   `titulo` varchar(150) DEFAULT NULL,
   `subtitulo` varchar(150) DEFAULT NULL,
   `link` longtext NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Fazendo dump de dados para tabela `slider`
+-- Extraindo dados da tabela `slider`
 --
 
 INSERT INTO `slider` (`id`, `imagem`, `titulo`, `subtitulo`, `link`) VALUES
@@ -179,138 +201,154 @@ INSERT INTO `slider` (`id`, `imagem`, `titulo`, `subtitulo`, `link`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `sobre_nos`
+-- Estrutura da tabela `sobre_nos`
 --
 
-CREATE TABLE IF NOT EXISTS `sobre_nos` (
+CREATE TABLE `sobre_nos` (
   `id` int(11) NOT NULL,
   `descricao` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Índices de tabelas apagadas
+-- Extraindo dados da tabela `sobre_nos`
+--
+
+INSERT INTO `sobre_nos` (`id`, `descricao`) VALUES
+(1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.');
+
+--
+-- Indexes for dumped tables
 --
 
 --
--- Índices de tabela `contato`
+-- Indexes for table `contato`
 --
 ALTER TABLE `contato`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `depoimento`
+-- Indexes for table `depoimento`
 --
 ALTER TABLE `depoimento`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `foto`
+-- Indexes for table `foto`
 --
 ALTER TABLE `foto`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_fk_galeria` (`id_galeria`);
 
 --
--- Índices de tabela `galeria`
+-- Indexes for table `galeria`
 --
 ALTER TABLE `galeria`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `login`
+-- Indexes for table `login`
 --
 ALTER TABLE `login`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `postagem`
+-- Indexes for table `postagem`
 --
 ALTER TABLE `postagem`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `processo_seletivo`
+-- Indexes for table `processo_seletivo`
 --
 ALTER TABLE `processo_seletivo`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `projeto`
+-- Indexes for table `projeto`
 --
 ALTER TABLE `projeto`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `servico`
+-- Indexes for table `servicos`
 --
-ALTER TABLE `servico`
+ALTER TABLE `servicos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `slider`
+-- Indexes for table `slider`
 --
 ALTER TABLE `slider`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `sobre_nos`
+-- Indexes for table `sobre_nos`
 --
 ALTER TABLE `sobre_nos`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT de tabelas apagadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de tabela `depoimento`
+-- AUTO_INCREMENT for table `depoimento`
 --
 ALTER TABLE `depoimento`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
--- AUTO_INCREMENT de tabela `galeria`
+-- AUTO_INCREMENT for table `galeria`
 --
 ALTER TABLE `galeria`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
--- AUTO_INCREMENT de tabela `login`
+-- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
--- AUTO_INCREMENT de tabela `postagem`
+-- AUTO_INCREMENT for table `postagem`
 --
 ALTER TABLE `postagem`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
--- AUTO_INCREMENT de tabela `processo_seletivo`
+-- AUTO_INCREMENT for table `processo_seletivo`
 --
 ALTER TABLE `processo_seletivo`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
--- AUTO_INCREMENT de tabela `projeto`
+-- AUTO_INCREMENT for table `projeto`
 --
 ALTER TABLE `projeto`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
--- AUTO_INCREMENT de tabela `slider`
+-- AUTO_INCREMENT for table `slider`
 --
 ALTER TABLE `slider`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
 --
--- AUTO_INCREMENT de tabela `sobre_nos`
+-- AUTO_INCREMENT for table `sobre_nos`
 --
 ALTER TABLE `sobre_nos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
--- Restrições para dumps de tabelas
+-- Constraints for dumped tables
 --
 
 --
--- Restrições para tabelas `foto`
+-- Limitadores para a tabela `foto`
 --
 ALTER TABLE `foto`
   ADD CONSTRAINT `id_fk_galeria` FOREIGN KEY (`id_galeria`) REFERENCES `galeria` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
