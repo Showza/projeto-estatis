@@ -130,6 +130,16 @@ hr{
     padding-right: 10%;
     padding-left: 10%;
 }
+.caption{
+    padding: 0% 2% ;
+}
+.caption h4{
+    float: center;
+    color: #222;   
+}
+.caption p{
+    color: #333;
+}
 .portifolio-content{
     display: flex;
     width: 300px;
@@ -138,7 +148,7 @@ hr{
     margin: 20px;
     background: #fff;
     border-radius: 4px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 /*
