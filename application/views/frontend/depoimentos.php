@@ -1,7 +1,7 @@
 
 <!-- DEPOIMENTOS -->
 <div id="depoimentos">
-    <h2 class="subtitle">OPINIÃO DOS NOSSOS CLIENTES</h2>
+    <h2 >OPINIÃO DOS NOSSOS CLIENTES</h2>
     <?php $i=0; foreach($listadepoimentos as $depoimentos) {?>
             <div class="content-depo" >
                 <div class="depo1" style="width: 70%">

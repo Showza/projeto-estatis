@@ -44,16 +44,7 @@ hr{
     font-family: 'Titillium Web', 'Arial';
 }
 .menu a:hover{
-<<<<<<< HEAD
     color: #333;
-=======
-    color: #111;
-    text-decoration: none;
-}
-.menu a:visited{
-    color: #800000;
-    text-decoration:none;
->>>>>>> 46dd97911e7b95e4276343543d65b0aa2d40f418
 }
 
 
@@ -61,9 +52,17 @@ hr{
     Depoimentos
 */
 
+
 #depoimentos{
-    background-color: #350606;
+    background-color: #f1f1f1;
     padding: 1%;
+    padding-bottom:3%; 
+}
+#depoimentos h2{
+    font-size: 35px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #350606; 
 }
 .content-depo{
     display: flex;
@@ -76,15 +75,16 @@ hr{
 .content-depo h4, .content-depo h5{
     text-align: initial;
     justify-content: end;
-    margin-left: 3%;
+    margin-left: 2%;
     margin-bottom: 1%;
     margin-top: 0px;
 }
 .depo1{
     width: 70%;
     border-radius: 10px;
-    background: #f1f1f1;
-    margin-right: 1%;
+    background: #fff;
+    margin-right: 0.5%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .author-depo{
@@ -96,14 +96,10 @@ hr{
 
 }
 .depo-txt{
-    padding: 3%;
+    padding: 2%;
     color: #111;
     font-weight: 150;
-<<<<<<< HEAD
     font-family: 'Montserrat', sans-serif;
-=======
-    font-family: 'Titillium Web', Courier, monospace;
->>>>>>> 46dd97911e7b95e4276343543d65b0aa2d40f418
     font-size: 15px;
 }
 
@@ -165,10 +161,6 @@ hr{
 }
 
 /*
-    IMAGEM PORTIFOLIO
-*/
-
-/*
     Footer
 */
 
@@ -176,14 +168,15 @@ hr{
 .footer{
     background-color: #350606;
     margin:0;
-    padding: 0.01%;
+    padding: 1%;
 }
 .subtitle{
     font-size: 35px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     color: #f5f5f5;
-    font-weight: bold; 
+    font-weight: bold;
+    margin-bottom: 2%; 
 }
 .content{
     display: flex;
