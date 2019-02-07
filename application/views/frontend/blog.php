@@ -14,7 +14,7 @@
         </a>
     </h2>
     <p class="lead">
-        por <a href="index.php" style="text-decoration:none; color: #64030e;"><?php echo $destaque->autor ?></a>
+        por <font style="color: #64030e;"><?php echo $destaque->autor ?></font>
     </p>
     <p><span><i class="far fa-clock"></i></span> <?php echo postadoem($destaque->data) ?></p>
     <br>
@@ -35,7 +35,7 @@
     <form method="post" action="<?php echo base_url('postagem/'.$destaque->id.'/'.limpar($destaque->titulo)) ?>"
     style="text-align:center; display: flex; align-items: center; justify-content: center;">
         <button type="submit" style="background-color: rgba(0,0,0,0); border-color: #64030e;
-        border-width: 0.3vw; border-style: solid; display:inline-block; padding:0.5em 2em;">
+        border-width: 0.2vw; border-style: solid; display:inline-block; padding:0.5em 2em;">
             <b style="color: black;">
             <font face="Titillium Web" style="text-align:center;">Leia mais</font>
             <span class="glyphicon glyphicon-chevron-right"></span>
