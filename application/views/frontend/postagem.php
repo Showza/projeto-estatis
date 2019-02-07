@@ -10,7 +10,6 @@
     ?>
     <h2>
         <b style="color: #64030e;"><?php echo $destaque->titulo ?></b>
-        </a>
     </h2>
     <p class="lead">
         por <font style="color: #64030e;"><?php echo $destaque->autor ?></font>
