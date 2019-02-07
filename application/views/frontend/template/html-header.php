@@ -5,7 +5,20 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 
-	<title><?php echo $titulo.' | '.$subtitulo ?></title>
+	<title><?php echo $titulo.' | '?>
+        <?php
+
+        if($subtitulo != ''){
+            echo $subtitulo;
+        }
+        else{
+            foreach ($subtitulodb as $dbtitulo) {
+                echo $dbtitulo->titulo;
+            }
+        }
+
+        ?>
+    </title>
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url('assets/frontend/img/logo.png') ?>">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
