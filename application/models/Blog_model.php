@@ -7,6 +7,7 @@ class Blog_model extends CI_Model {
     public $titulo;
     public $subtitulo;
     public $conteudo;
+    public $autor;
     public $data;
     public $imagem;
 
