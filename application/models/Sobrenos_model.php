@@ -3,8 +3,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Sobrenos_model extends CI_Model {
 
-	public $id;
-	public $descricao;
+	public $missao;
+	public $visao;
+	public $valores;
 	
 
 	public function mostrar_texto(){
@@ -12,8 +13,11 @@ class Sobrenos_model extends CI_Model {
         return $this->db->get()->result();
 	}
 
-	public function alterar($descricao){
-        $dados['descricao'] = $descricao;
-        return $this->db->update('sobre_nos', $dados);
-    }    
+	public function adicionar($missao, $visao, $valores){
+        $dados['missao'] = $missao;
+        $dados['visao'] = $visao;
+        $dados['valores'] = $valores;
+
+        return $this->db->update('sobre_nos',$dados);
+    }  
 }
