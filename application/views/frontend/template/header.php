@@ -1,12 +1,13 @@
 <div class="navbar">
   <div class="logo">
-    <a href="<?php echo base_url(); ?>"><img src="<?php echo base_url('/assets/frontend/img/logo.png'); ?>"></a>
+    <a href="home"><img src="<?php echo base_url('/assets/frontend/img/logo.png'); ?>"></a>
   </div>
   <div class="menu">
-      <a href="<?php echo base_url(); ?>">INÍCIO</a>
-      <a href="<?php echo base_url('#sobrenos'); ?>">QUEM SOMOS</a>
-      <a href="<?php echo base_url('servicos'); ?>">SERVIÇOS</a>
-      <a href="<?php echo base_url('blog') ?>">BLOG</a>
+      <a href="home">INICIO</a>
+      <a href="#portifolio">NOSSOS PROJETOS</a>
+      <a href="#sobrenos">QUEM SOMOS</a>
+      <a href="#">SERVIÇOS</a>
+      <a href="#">BLOG</a>
       <a href="#contato">CONTATO</a>
       </div>
 </div>
