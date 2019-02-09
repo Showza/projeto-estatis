@@ -5,13 +5,13 @@ class Sobrenos extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
-		
+
 		$this->load->model('sobrenos_model','modelsobrenos');
 	}
 
 	public function index(){
 		$this->load->library('table');
-     
+
 		$dados['descricao'] = $this->modelsobrenos->mostrar_texto();
 
 
@@ -49,8 +49,7 @@ class Sobrenos extends CI_Controller {
 			}else{
 				echo "Houve um erro no sistema!";
 			}
-		}	
+		}
 	}
-	
 }
 ?>

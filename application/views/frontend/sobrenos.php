@@ -1,17 +1,17 @@
 <!-- QUEM SOMOS -->
 
-	<div class="divmaster">
+	<div class="divmaster" id="sobrenos">
 		<section class="titulo">
-			
+
 			<h1>SOBRE NÓS</h1>
 			<hr>
-			<?php 
+			<?php
 				foreach ($descricao as $sobre){
 			?>
-			<p> 
+			<p>
 				<?php echo $sobre->descricao ?>
 			</p>
-			<?php  
+			<?php
 				}
 			?>
 			<ul class="img">
@@ -28,6 +28,6 @@
 					<h4>VALORES</h4>
 				</li>
 			</ul>
-			
+
 		</section>
 	</div>

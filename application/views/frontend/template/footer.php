@@ -53,8 +53,8 @@
 
     <div>
         <div class="social">
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-instagram"></a>
+            <a href="https://www.facebook.com/estatisjr/" target="_blank" class="fa fa-facebook"></a>
+            <a href="https://www.instagram.com/estatisjr/" target="_blank" class="fa fa-instagram"></a>
         </div>
         <p class="info">
             SALA 2-06 ICEB |UFOP CAMPUS MORRO DO CRUZEIRO |+55(31) 3559-1349| estatisjr@gmail.com
@@ -70,8 +70,7 @@
         <div class="col-lg-12">
             <center>
                 <font face="Consolas">
-                <p>Desenvolvido por Voluta Soluções Digitais</p>
-                <p>Copyright &reg;</p>
+                <p>Desenvolvido por Voluta Soluções Digitais | Copyright &reg;</p>
                 </font>
             </center>
         </div>
