@@ -20,20 +20,13 @@
                                 echo form_open_multipart('admin/portifolio/inserir');
                              ?>
                              <div class="form-group">
-                                 <br/>
-                                 <label id="txt-modalidade">Modalidade</label><br/>
-                                 <select id="txt-modalidade" name="txt-modalidade">
-                                   <option> Escolha uma opção: </option>
-                                   <option value="Projeto">Projeto</option>
-                                   <option value="Serviço">Serviço</option>
-                                 </select>
-                                 <br/>
+                                 
                                  <br/>
                                  <label id="txt-nome">Nome</label>
-                                 <input id="txt-nome" name="txt-nome" type="text" class="form-control" placeholder="Digite o nome do projeto ou serviço">
+                                 <input id="txt-nome" name="txt-nome" type="text" class="form-control" placeholder="Digite o nome do evento correspondente a imagem">
                                  <br/>
                                  <label id="txt-descricao">Descricao</label>
-                                 <input id="txt-descricao" name="txt-descricao" type="text" class="form-control" placeholder="Descreva o projeto ou serviço">
+                                 <input id="txt-descricao" name="txt-descricao" type="text" class="form-control" placeholder="Descreva o evento da imagem">
                                  <br/>
                                  <label id="txt-imagem">Imagem</label>
                                  <input id="txt-imagem" name="txt-imagem" type="file" value="Procurar arquivo..." placeholder="nenhum arquivo selecionado">
@@ -63,14 +56,14 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <?php
-                                $this->table->set_heading("Titulo","Alterar Dados","Alterar Foto","Excluir","Categoria");
+                                $this->table->set_heading("Titulo","Alterar Dados","Alterar Foto","Excluir");
                                 foreach($portifolio as $portifolio){
                                     $titulo = $portifolio->nome;
                                     
-                                    $alterar = anchor(base_url('admin/portifolio/pagina_alterar/'.$servico->id),'<button type="button" class="btn btn-link"><span style="color:#337ab7"><i class="fa fa-refresh fa-fw"></i>Alterar</span></button>');
-                                    $foto = anchor(base_url('admin/portifolio/pagina_foto/'.$servico->id),'<button type="button" class="btn btn-link"><span style="color:purple"><i class="fa fa-file-pdf-o fa-fw"></i>Upload</span></button>');
-                                    $excluir = $excluir= '<button type="button" class="btn btn-link" data-toggle="modal" data-target=".excluir-modal-'.$servico->id.'"><span style="color:red"><i class="fa fa-remove fa-fw"></i> Excluir</span></button>';
-                                    echo $modal= ' <div class="modal fade excluir-modal-'.$servico->id.'" tabindex="-1" role="dialog" aria-hidden="true">
+                                    $alterar = anchor(base_url('admin/portifolio/pagina_alterar/'.$portifolio->id),'<button type="button" class="btn btn-link"><span style="color:#337ab7"><i class="fa fa-refresh fa-fw"></i>Alterar</span></button>');
+                                    $foto = anchor(base_url('admin/portifolio/pagina_foto/'.$portifolio->id),'<button type="button" class="btn btn-link"><span style="color:purple"><i class="fa fa-file-pdf-o fa-fw"></i>Upload</span></button>');
+                                    $excluir = $excluir= '<button type="button" class="btn btn-link" data-toggle="modal" data-target=".excluir-modal-'.$portifolio->id.'"><span style="color:red"><i class="fa fa-remove fa-fw"></i> Excluir</span></button>';
+                                    echo $modal= ' <div class="modal fade excluir-modal-'.$portifolio->id.'" tabindex="-1" role="dialog" aria-hidden="true">
                                     <div class="modal-dialog modal-sm">
                                         <div class="modal-content">
 
@@ -78,7 +71,7 @@
                                                 <h4 class="modal-title" id="myModalLabel2">Exclusão de servico</h4>
                                             </div>
                                             <div class="modal-body">
-                                                <h4>Deseja Realmente excluir o serviço '.$portifolio->nome.'?</h4>
+                                                <h4>Deseja Realmente excluir'.$portifolio->nome.'?</h4>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>

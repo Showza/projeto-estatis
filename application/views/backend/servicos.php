@@ -78,7 +78,7 @@
                                                 <h4 class="modal-title" id="myModalLabel2">Exclusão de servico</h4>
                                             </div>
                                             <div class="modal-body">
-                                                <h4>Deseja Realmente excluir o serviço '.$servico->nome.'?</h4>
+                                                <h4>Deseja Realmente excluir'.$servico->nome.'?</h4>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
