@@ -50,7 +50,6 @@
                                 echo form_close();
                              ?>
                         </div>
-
                     </div>
                     <!-- /.row (nested) -->
                 </div>
@@ -60,4 +59,3 @@
         </div>
         <!-- /.col-lg-12 -->
         <!--
-        

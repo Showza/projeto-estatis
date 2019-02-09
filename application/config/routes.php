@@ -54,4 +54,5 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['admin'] = 'admin/home/index';
 $route['admin/slider/(:num)'] = 'admin/slider/index/$1';
-
+$route['blog/(:num)'] = 'blog/index/$1';
+$route['postagem/(:num)/(:any)'] = 'postagem/index/$1/$2';

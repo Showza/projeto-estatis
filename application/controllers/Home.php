@@ -24,6 +24,7 @@
             $this->load->view('frontend/template/html-header', $dados);
             $this->load->view('frontend/template/header');
             $this->load->view('frontend/home');
+            $this->load->view('frontend/portifolio');
             $this->load->view('frontend/sobrenos');
             $this->load->view('frontend/depoimentos');
             $this->load->view('frontend/template/footer');
