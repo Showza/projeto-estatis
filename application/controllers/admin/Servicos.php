@@ -45,7 +45,7 @@ class Servicos extends CI_Controller {
             $imagem =  $_FILES['txt-imagem'];
 						$original_name = $_FILES['txt-imagem']['name'];
 						$new_name = strtr(utf8_decode($original_name), utf8_decode(' àáâãäçèéêëìíîïñòóôõöùúûüýÿÀÁÂÃÄÇÈÉÊËÌÍÎÏÑÒÓÔÕÖÙÚÛÜÝ()@#$!%¨&*?+="[]{}-<>;^~§º¬°¢£³²¹ª|'), '_aaaaaceeeeiiiinooooouuuuyyAAAAACEEEEIIIINOOOOOUUUUY___________________________________');;
-						$configuracao['upload_path'] = './assets/frontend/img/servicos';
+						$configuracao['upload_path'] = './assets/arquivos/fotos';
 						$configuracao['allowed_types'] = 'png|jpeg|jpg';
 						$configuracao['file_name'] = $new_name;
 						$this->load->library('upload', $configuracao);
