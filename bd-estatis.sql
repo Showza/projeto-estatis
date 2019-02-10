@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 10-Fev-2019 às 15:08
+-- Generation Time: 10-Fev-2019 às 20:06
 -- Versão do servidor: 10.1.37-MariaDB
 -- versão do PHP: 7.3.0
 
@@ -178,7 +178,7 @@ INSERT INTO `servicos` (`id`, `nome`, `descricao`, `imagem`, `modalidade`) VALUE
 
 CREATE TABLE `slider` (
   `id` int(11) NOT NULL,
-  `imagem` int(11) NOT NULL,
+  `imagem` longtext NOT NULL,
   `titulo` varchar(150) DEFAULT NULL,
   `subtitulo` varchar(150) DEFAULT NULL,
   `link` longtext NOT NULL
@@ -189,14 +189,14 @@ CREATE TABLE `slider` (
 --
 
 INSERT INTO `slider` (`id`, `imagem`, `titulo`, `subtitulo`, `link`) VALUES
-(1, 1, 'ANÁLISES ACADÊMICAS', 'PEÇA UM ORÇAMENTO', '#contato'),
-(2, 1, 'MODELAGEM ESTATÍSTICA', 'PEÇA UM ORÇAMENTO', '#contato'),
-(3, 1, 'ESTATÍSTICA DESCRITIVA', 'PEÇA UM ORÇAMENTO', '#contato'),
-(4, 1, 'PLANEJAMENTO AMOSTRAL', 'PEÇA UM ORÇAMENTO', '#contato'),
-(5, 1, 'PESQUISA DE OPINÃO E MERCADO', 'PEÇA UM ORÇAMENTO', '#contato'),
-(6, 1, 'CONTROLE DE QUALIDADE', 'PEÇA UM ORÇAMENTO', '#contato'),
-(7, 1, 'BIOESTATÍSTICA', 'PEÇA UM ORÇAMENTO', '#contato'),
-(8, 1, 'GEOESTATÍSTICA', 'PEÇA UM ORÇAMENTO', '#contato');
+(1, '8f14e45fceea167a5a36dedd4bea2543.jpg', 'ANÁLISES ACADÊMICAS', 'PEÇA UM ORÇAMENTO', '#contato'),
+(2, '1679091c5a880faf6fb5e6087eb1b2dc.jpg', 'MODELAGEM ESTATÍSTICA', 'PEÇA UM ORÇAMENTO', '#contato'),
+(3, 'a87ff679a2f3e71d9181a67b7542122c.jpg', 'ESTATÍSTICA DESCRITIVA', 'PEÇA UM ORÇAMENTO', '#contato'),
+(4, 'c4ca4238a0b923820dcc509a6f75849b.jpg', 'PLANEJAMENTO AMOSTRAL', 'PEÇA UM ORÇAMENTO', '#contato'),
+(5, 'c9f0f895fb98ab9159f51fd0297e236d.jpg', 'PESQUISA DE OPINÃO E MERCADO', 'PEÇA UM ORÇAMENTO', '#contato'),
+(6, 'c81e728d9d4c2f636f067f89cc14862c.jpg', 'CONTROLE DE QUALIDADE', 'PEÇA UM ORÇAMENTO', '#contato'),
+(7, 'e4da3b7fbbce2345d7772b0674a318d5.jpg', 'BIOESTATÍSTICA', 'PEÇA UM ORÇAMENTO', '#contato'),
+(8, 'eccbc87e4b5ce2fe28308fd9f2a7baf3.jpg', 'GEOESTATÍSTICA', 'PEÇA UM ORÇAMENTO', '#contato');
 
 -- --------------------------------------------------------
 
@@ -326,7 +326,7 @@ ALTER TABLE `projeto`
 -- AUTO_INCREMENT for table `slider`
 --
 ALTER TABLE `slider`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Constraints for dumped tables
