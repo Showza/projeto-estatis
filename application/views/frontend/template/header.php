@@ -50,7 +50,7 @@
               <span class="icon-bar" style="background-color:#820e0e"></span>
           </button>
           <a class="navbar-brand navbar" href="<?php echo base_url(); ?>">
-              <img src="assets/frontend/img/logo.png" style="width: 20%; margin-left:5em; margin-top:-1.5em">
+              <img src="<?php echo base_url(assets/frontend/img/logo.png); ?>" style="width: 20%; margin-left:5em; margin-top:-1.5em">
           </a>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling ->
