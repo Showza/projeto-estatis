@@ -23,7 +23,7 @@
                         <a href="<?php echo base_url('admin/postagens') ?>"><i class="fa fa-edit fa-fw"></i> Postagens</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('admin/galeria') ?>"><i class="fa fa-image fa-fw"></i> Galeria</a>
+                        <a href="<?php echo base_url('admin/portifolio') ?>"><i class="fa fa-image fa-fw"></i> Galeria</a>
                     </li>
                     <li>
                         <a href="<?php echo base_url('admin/servicos') ?>"><i class="fa fa-clipboard fa-fw"></i>Projetos e Serviços</a>
