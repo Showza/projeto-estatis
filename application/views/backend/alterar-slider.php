@@ -1,3 +1,4 @@
+<!-- /.col-lg-6 -->
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
@@ -10,36 +11,32 @@
         <div class="col-lg-6">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                   <?php echo 'Alterar '.$subtitulo ?>
+                   <?php echo 'Alterar Dados' ?>
                 </div>
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-lg-12">
                             <?php
-                                echo validation_errors('<div class="alert alert-danger">', '</div>');
+                                echo validation_errors('<div class="alert alert-danger">','</div>');
                                 foreach($slider as $slide){
-                                    echo form_open('admin/slider/salvar_alteracoes/'.md5($slide->id));
-                            ?>
-                                    <div class="form-group">
-                                        <label id="txt-titulo">Título do Slide</label>
-                                        <input type="text"  id="txt-titulo"  name="txt-titulo" class="form-control"
-                                        placeholder="Digite o título do slide..." value="<?php echo $slide->titulo ?>">
-                                    </div>
-                                    <div class="form-group">
-                                        <label id="txt-subtitulo">Subtítulo</label>
-                                        <input type="text"  id="txt-subtitulo"  name="txt-subtitulo" class="form-control"
-                                        placeholder="Digite o subtítulo do slide..." value="<?php echo $slide->subtitulo ?>">
-                                    </div>
-                                    <div class="form-group">
-                                        <label id="txt-link">Link</label>
-                                        <input type="text"  id="txt-link"  name="txt-link" class="form-control"
-                                        placeholder="Digite o link de redirecionamento do slide..." value="<?php echo $slide->link ?>">
-                                    </div>
-                                    <input type= "hidden" name= "txt-id" id= "txt-id" value= "<?php echo $slide->id ?>">
-                                    <button type="submit" class="btn btn-default">Atualizar</button>
+                                echo form_open('admin/slider/salvar_alteracoes/'.md5($slide->id));
+
+                             ?>
+                             <div class="form-group">
+                                 <label id="txt-titulo">Título</label>
+                                 <input id="txt-titulo" name="txt-titulo" type="text" class="form-control" placeholder="Digite o título do slide" value="<?php echo $slide->titulo ?>">
+                                 <br/>
+                                 <label id="txt-subtitulo">Subtítulo</label>
+                                 <input id="txt-subtitulo" name="txt-subtitulo" type="text" class="form-control" placeholder="Subtítulo do slide" value="<?php echo $slide->subtitulo ?>">
+                                 <br/>
+                                 <label id="txt-link">Link</label>
+                                 <input id="txt-link" name="txt-link" type="text" class="form-control" placeholder="Link de redirecionamento" value="<?php echo $slide->link ?>">
+                                 <br/>
+                             </div>
+                             <button type="submit" class="btn btn-primary">Salvar Alterações</button>
                             <?php
                                 echo form_close();
-                            ?>
+                             ?>
                         </div>
 
                     </div>
@@ -54,7 +51,7 @@
         <div class="col-lg-6">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                   <?php echo 'Imagem de destaque do '.$subtitulo ?>
+                   <?php echo 'Alterar Imagem' ?>
                 </div>
                 <div class="panel-body">
                     <div class="row" style= "padding-bottom: 10px;">
@@ -68,34 +65,30 @@
                         </style>
                         <div class="col-lg-3 col-lg-offset-3">
                             <?php
-                                if($slide->imagem == 1){
-                                    echo img("assets/frontend/img/slider/".md5($slide->id).".jpg");
+                                if($slide->imagem != null){
+                                    echo img("assets/frontend/img/slider/".$slide->imagem);
                                 }
                                 else {
                                     echo img("assets/frontend/img/slider/SemFoto.png");
                                 }
+                                echo form_open_multipart('admin/slider/nova_foto/'.md5($slide->id).'/'.$slide->imagem);
                             ?>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-12">
-                            <?php
-                                $divopen= '<div class="form-group">';
-                                $divclose= '</div>';
-                                echo form_open_multipart('admin/slider/nova_foto');
-                                echo form_hidden('id', md5($slide->id));
-                                echo $divopen;
-                                $imagem= array('name' => 'userfile', 'id' => 'userfile', 'class' => 'form-control');
-                                echo form_upload($imagem);
-                                echo $divclose;
-                                echo $divopen;
-                                $botao= array('name' => 'btn_adicionar', 'id' => 'btn_adicionar', 'class' => 'btn btn_default',
-                                    'value' => 'Adicionar nova Imagem');
-                                echo form_submit($botao);
-                                echo $divclose;
-                                echo form_close();
-                                }
+                            <div class="form-group">
+                                <br/>
+                                <input id="txt-imagem" name="txt-imagem" type="file" accept="application/png" placeholder="Matriz foto">
+                                <br/>
+
+                                <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                           <?php
+                               }
+                               echo form_close();
                             ?>
+                       </div>
+
                         </div>
 
                     </div>

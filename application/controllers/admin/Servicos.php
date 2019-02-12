@@ -37,11 +37,11 @@ class Servicos extends CI_Controller {
         if($this->form_validation->run() == FALSE){
             $this->index();
         }
-        else{        	
+        else{
             $modalidade = $this->input->post('txt-modalidade');
             $nome = $this->input->post('txt-nome');
             $descricao = $this->input->post('txt-descricao');
-            
+
             $imagem =  $_FILES['txt-imagem'];
 						$original_name = $_FILES['txt-imagem']['name'];
 						$new_name = strtr(utf8_decode($original_name), utf8_decode(' àáâãäçèéêëìíîïñòóôõöùúûüýÿÀÁÂÃÄÇÈÉÊËÌÍÎÏÑÒÓÔÕÖÙÚÛÜÝ()@#$!%¨&*?+="[]{}-<>;^~§º¬°¢£³²¹ª|'), '_aaaaaceeeeiiiinooooouuuuyyAAAAACEEEEIIIINOOOOOUUUUY___________________________________');;
@@ -143,7 +143,7 @@ class Servicos extends CI_Controller {
         $extensoes_permitidas = array('.png', '.jpeg', '.jpg');
         // Faz a verificação da extensão do arquivo enviado
         $extensao = strrchr($_FILES['txt-imagem']['name'], '.');
-        
+
         if(in_array($extensao, $extensoes_permitidas) == true)
         {
             if (!unlink($caminhoArquivo)){
@@ -169,7 +169,7 @@ class Servicos extends CI_Controller {
             }
         }
         else{
-            echo "Selecione apenas arquivos de imagem !";   
+            echo "Selecione apenas arquivos de imagem !";
         }
 	}
 }

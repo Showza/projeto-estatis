@@ -19,36 +19,39 @@ class Slider_model extends CI_Model {
         return $this->db->get()->result();
     }
 
-    public function listar_slides($id){
-        $this->db->select('id, imagem, titulo, subtitulo, link');
+    public function listar_slider($id){
+        $this->db->select('id, titulo, subtitulo, link, imagem');
         $this->db->from('slider');
-        $this->db->where('md5(id)', $id);
+        $this->db->where('md5(id)',$id);
         return $this->db->get()->result();
     }
 
-    public function alterar($titulo, $subtitulo, $link, $id){
-        $dados['titulo']= $titulo;
-        $dados['subtitulo']= $subtitulo;
-        $dados['link']= $link;
-        $this->db->where('id', $id);
-        return $this->db->update('slider', $dados);
+	public function adicionar($titulo, $subtitulo, $link, $imagem){
+        $dados['titulo'] = $titulo;
+        $dados['subtitulo'] = $subtitulo;
+        $dados['link'] = $link;
+        $dados['imagem'] = $imagem;
+
+        return $this->db->insert('slider',$dados);
     }
 
-    public function alterar_img($id){
-        $dados['imagem']= 1;
-        $this->db->where('md5(id)', $id);
-        return $this->db->update('slider', $dados);
+    public function alterar($id, $titulo, $subtitulo, $link){
+        $dados['titulo'] = $titulo;
+        $dados['subtitulo'] = $subtitulo;
+        $dados['link'] = $link;
+
+        $this->db->where('id',$id);
+        return $this->db->update('slider',$dados);
     }
 
-    public function adicionar($titulo, $subtitulo, $link){
-        $dados['titulo']= $titulo;
-        $dados['subtitulo']= $subtitulo;
-        $dados['link']= $link;
-        return $this->db->insert('slider', $dados);
-    }
-
-    public function excluir($id){
-        $this->db->where('md5(id)', $id);
+    public function remover($id, $imagem){
+        $this->db->where('md5(id)',$id);
         return $this->db->delete('slider');
+    }
+
+    public function nova_foto($id, $imagem){
+    	$dados['imagem'] = $imagem;
+      	$this->db->where('md5(id)',$id);
+      	return $this->db->update('slider',$dados);
     }
 }

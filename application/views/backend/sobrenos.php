@@ -10,12 +10,13 @@
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                   <?php echo $subtitulo ?>
+                   <?php echo 'Adicionar'.' '.$subtitulo?>
                 </div>
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-lg-12">
                             <?php
+
                                 $this->table->set_heading("Descrição");
                                 foreach($descricao as $sobre){
                                     $nomeproj= $sobre->descricao;
@@ -30,6 +31,41 @@
                             ?>
                         </div>
 
+                                echo validation_errors('<div class="alert alert-danger">','</div>');
+                                echo form_open_multipart('admin/sobrenos/inserir');
+                             ?>
+                             <div class="form-group">
+                                 <br/>
+                                 <label id="txt-missao">Missão</label>
+                                 <?php
+                                    foreach($descricao as $sobre){?>
+                                     <input id="txt-missao" name="txt-missao" type="text" class="form-control" placeholder="missão da empresa" value= "<?php echo $sobre->missao?>">
+                                     <?php
+                                     }
+                                     ?>
+                                 <br/>
+                                 <label id="txt-visao">Visão</label>
+                                 <?php
+                                    foreach($descricao as $sobre){?>
+                                     <input id="txt-visao" name="txt-visao" type="text" class="form-control" placeholder="visão da empresa" value= "<?php echo $sobre->visao?>">
+                                     <?php
+                                     }
+                                     ?>
+                                 <br/>
+                                 <label id="txt-valores">Valores</label>
+                                 <?php
+                                    foreach($descricao as $sobre){?>
+                                     <input id="txt-valores" name="txt-valores" type="text" class="form-control" placeholder="valores da empresa" value= "<?php echo $sobre->valores?>">
+                                     <?php
+                                     }
+                                     ?>
+                             </div>
+                             <button type="submit" class="btn btn-primary">Salvar</button>
+                            <?php
+                                echo form_close();
+                             ?>
+                        </div>
+
                     </div>
                     <!-- /.row (nested) -->
                 </div>
@@ -38,6 +74,7 @@
             <!-- /.panel -->
         </div>
         <!-- /.col-lg-12 -->
+
     </div>
     <!-- /.row -->
 </div>
@@ -45,3 +82,5 @@
 
 </div>
 <!-- /#wrapper -->
+
+        <!--

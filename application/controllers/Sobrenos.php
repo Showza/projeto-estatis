@@ -5,12 +5,11 @@ class Sobrenos extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
-		
+		$this->load->model('sobrenos_model','modelsobrenos');
 	}
 
 	public function index()
 	{
-		$this->load->model('sobrenos_model','modelsobrenos');
 		$dados['descricao'] = $this->modelsobrenos->mostrar_texto();
 			
 		$dados['titulo'] = 'Estatis Jr.';

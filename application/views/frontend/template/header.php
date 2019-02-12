@@ -1,12 +1,13 @@
 <div class="navbar">
   <div class="logo">
-    <a href="<?php echo base_url(); ?>"><img src="<?php echo base_url('/assets/frontend/img/logo.png'); ?>"></a>
+    <a href="home"><img src="<?php echo base_url('/assets/frontend/img/logo.png'); ?>"></a>
   </div>
   <div class="menu">
-      <a href="<?php echo base_url(); ?>">INÍCIO</a>
+      <a href="<?php echo base_url(); ?>">INICIO</a>
+      <a href="<?php echo base_url('#portifolio'); ?>">NOSSOS PROJETOS</a>
       <a href="<?php echo base_url('#sobrenos'); ?>">QUEM SOMOS</a>
       <a href="<?php echo base_url('servicos'); ?>">SERVIÇOS</a>
-      <a href="<?php echo base_url('blog') ?>">BLOG</a>
+      <a href="<?php echo base_url('blog'); ?>">BLOG</a>
       <a href="#contato">CONTATO</a>
       </div>
 </div>
@@ -49,7 +50,7 @@
               <span class="icon-bar" style="background-color:#820e0e"></span>
           </button>
           <a class="navbar-brand navbar" href="<?php echo base_url(); ?>">
-              <img src="assets/frontend/img/logo.png" style="width: 20%; margin-left:5em; margin-top:-1.5em">
+              <img src="<?php echo base_url(assets/frontend/img/logo.png); ?>" style="width: 20%; margin-left:5em; margin-top:-1.5em">
           </a>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling ->
